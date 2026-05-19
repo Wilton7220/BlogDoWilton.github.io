@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Vida de Maria Firmina dos Reis</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background-color:#0B1F3A;
+      color:white;
+      line-height:1.7;
+    }
+
+    header{
+      background:linear-gradient(90deg,#00B7C2,#0B1F3A);
+      padding:30px;
+      text-align:center;
+      box-shadow:0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    header h1{
+      color:#40E0D0;
+      font-size:42px;
+      margin-bottom:10px;
+    }
+
+    header p{
+      font-size:18px;
+      color:white;
+    }
+
+    nav{
+      background-color:#081628;
+      display:flex;
+      justify-content:center;
+      gap:25px;
+      padding:15px;
+      flex-wrap:wrap;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#40E0D0;
+    }
+
+    .banner{
+      width:100%;
+      height:400px;
+      background:url('https://upload.wikimedia.org/wikipedia/commons/7/70/Maria_Firmina_dos_Reis.jpg') center/cover;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+    }
+
+    .banner h2{
+      background-color:rgba(0,0,0,0.6);
+      padding:20px;
+      border-radius:10px;
+      color:#40E0D0;
+      font-size:38px;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+      padding:40px 0;
+    }
+
+    .card{
+      background-color:#12294B;
+      margin-bottom:35px;
+      padding:30px;
+      border-radius:15px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    .card h2{
+      color:#40E0D0;
+      margin-bottom:20px;
+      font-size:32px;
+    }
+
+    .card p{
+      font-size:18px;
+      margin-bottom:15px;
+      text-align:justify;
+    }
+
+    .card img{
+      width:100%;
+      border-radius:10px;
+      margin-top:20px;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:20px;
+      padding:12px 25px;
+      background-color:#3DDC97;
+      color:#0B1F3A;
+      text-decoration:none;
+      border-radius:8px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background-color:#2ec784;
+      transform:scale(1.05);
+    }
+
+    footer{
+      background-color:#081628;
+      text-align:center;
+      padding:25px;
+      margin-top:40px;
+    }
+
+    footer p{
+      color:white;
+    }
+
+    .importancia{
+      border-left:6px solid #3DDC97;
+      padding-left:20px;
+    }
+
+    @media(max-width:768px){
+
+      header h1{
+        font-size:30px;
+      }
+
+      .banner h2{
+        font-size:26px;
+      }
+
+      .card h2{
+        font-size:26px;
+      }
+
+      .card p{
+        font-size:16px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>A Vida de Maria Firmina dos Reis</h1>
+    <p>Uma mulher que marcou a história na luta contra o racismo</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#historia">História</a>
+    <a href="#obras">Obras</a>
+    <a href="#racismo">Luta Antirracista</a>
+    <a href="#importancia">Importância</a>
+  </nav>
+
+  <section class="banner" id="inicio">
+    <h2>Educação, Literatura e Resistência</h2>
+  </section>
+
+  <div class="container">
+
+    <div class="card" id="historia">
+      <h2>Quem foi Maria Firmina dos Reis?</h2>
+
+      <p>
+        Maria Firmina dos Reis nasceu em 1822, no Maranhão, e foi uma das mulheres
+        mais importantes da literatura brasileira. Ela foi professora, escritora,
+        compositora e uma grande defensora da igualdade racial.
+      </p>
+
+      <p>
+        Em uma época marcada pela escravidão e pelo preconceito, Maria Firmina usou
+        seus livros e sua voz para denunciar as injustiças sofridas pelas pessoas negras.
+      </p>
+
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Maria_Firmina_dos_Reis.jpg">
+    </div>
+
+    <div class="card" id="obras">
+      <h2>Principais Obras</h2>
+
+      <p>
+        Sua obra mais famosa foi <strong>Úrsula</strong>, publicada em 1859.
+        O livro é considerado um dos primeiros romances abolicionistas do Brasil.
+      </p>
+
+      <p>
+        Ela também escreveu:
+      </p>
+
+      <ul style="margin-left:25px; margin-top:15px;">
+        <li>Úrsula</li>
+        <li>A Escrava</li>
+        <li>Cantos à beira-mar</li>
+        <li>Gupeva</li>
+      </ul>
+
+      <a href="#" class="btn">Conhecer Mais</a>
+    </div>
+
+    <div class="card" id="racismo">
+      <h2>A Luta Contra o Racismo</h2>
+
+      <p>
+        Maria Firmina dos Reis lutou contra o racismo através da educação e da literatura.
+        Ela defendia a liberdade das pessoas escravizadas e acreditava que todos mereciam
+        respeito e igualdade.
+      </p>
+
+      <p>
+        Suas histórias mostravam os sentimentos e sofrimentos das pessoas negras,
+        algo muito importante em uma época em que o preconceito era muito forte.
+      </p>
+
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Slavery_in_Brazil.jpg/800px-Slavery_in_Brazil.jpg">
+    </div>
+
+    <div class="card importancia" id="importancia">
+      <h2>A Importância de Maria Firmina na História</h2>
+
+      <p>
+        Maria Firmina dos Reis abriu caminho para futuras escritoras negras no Brasil.
+        Sua coragem ajudou a combater o racismo e inspirou muitas pessoas na luta
+        pela igualdade.
+      </p>
+
+      <p>
+        Hoje ela é reconhecida como símbolo da literatura afro-brasileira e uma das
+        mulheres mais importantes da história do país.
+      </p>
+
+      <a href="#" class="btn">Compartilhar História</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>
+      Blog Escolar - A Vida de Maria Firmina dos Reis © 2026
+    </p>
+  </footer>
+
+</body>
+</html>
