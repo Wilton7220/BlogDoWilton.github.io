@@ -10,100 +10,174 @@
       margin:0;
       padding:0;
       box-sizing:border-box;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     body{
-      background-color:#0B1F3A;
+      background: linear-gradient(135deg, #0B1F3A 0%, #1a3a52 50%, #0f2540 100%);
       color:white;
       line-height:1.7;
+      min-height:100vh;
     }
 
     header{
-      background:linear-gradient(90deg,#00B7C2,#0B1F3A);
-      padding:30px;
+      background: linear-gradient(135deg, #00D4FF 0%, #0099CC 50%, #006699 100%);
+      padding:40px 20px;
       text-align:center;
-      box-shadow:0 4px 10px rgba(0,0,0,0.4);
+      box-shadow:0 8px 32px rgba(0, 212, 255, 0.3);
+      border-bottom:4px solid #40E0D0;
     }
 
     header h1{
-      color:#40E0D0;
-      font-size:42px;
+      color:white;
+      font-size:48px;
       margin-bottom:10px;
+      text-shadow:2px 2px 4px rgba(0,0,0,0.3);
+      animation: slideDown 0.8s ease-out;
     }
 
     header p{
       font-size:18px;
-      color:white;
+      color:#E0F7FA;
+      text-shadow:1px 1px 2px rgba(0,0,0,0.2);
+    }
+
+    @keyframes slideDown{
+      from{
+        opacity:0;
+        transform:translateY(-20px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
     }
 
     .autor-info{
-      background-color:#12294B;
-      padding:20px;
-      margin:20px auto;
+      background: linear-gradient(135deg, #1a5f7a 0%, #0f3d52 100%);
+      padding:30px;
+      margin:30px auto;
       max-width:1200px;
       width:90%;
-      border-radius:10px;
+      border-radius:15px;
       text-align:center;
-      border-left:6px solid #3DDC97;
+      border-left:6px solid #40E0D0;
+      box-shadow:0 8px 32px rgba(0, 212, 255, 0.2);
+      transform:scale(1);
+      transition:transform 0.3s ease;
+    }
+
+    .autor-info:hover{
+      transform:scale(1.02);
+      box-shadow:0 12px 40px rgba(0, 212, 255, 0.3);
     }
 
     .autor-info img{
-      width:150px;
-      height:150px;
+      width:160px;
+      height:160px;
       border-radius:50%;
-      border:4px solid #40E0D0;
+      border:5px solid #40E0D0;
       margin-bottom:15px;
       object-fit:cover;
+      box-shadow:0 0 20px rgba(64, 224, 208, 0.5);
+      transition:transform 0.3s ease;
+    }
+
+    .autor-info img:hover{
+      transform:scale(1.1) rotateZ(5deg);
     }
 
     .autor-info h3{
       color:#40E0D0;
-      font-size:24px;
+      font-size:28px;
       margin-bottom:10px;
+      text-shadow:2px 2px 4px rgba(0,0,0,0.3);
     }
 
     .autor-info p{
       font-size:16px;
       margin-bottom:8px;
+      color:#E0F7FA;
+    }
+
+    .badge{
+      display:inline-block;
+      background:linear-gradient(135deg, #FF6B9D 0%, #C06C84 100%);
+      padding:8px 16px;
+      border-radius:20px;
+      margin-top:10px;
+      font-weight:bold;
+      box-shadow:0 4px 15px rgba(255, 107, 157, 0.3);
     }
 
     nav{
       background-color:#081628;
       display:flex;
       justify-content:center;
-      gap:25px;
-      padding:15px;
+      gap:15px;
+      padding:20px;
       flex-wrap:wrap;
+      position:sticky;
+      top:0;
+      z-index:100;
+      box-shadow:0 4px 15px rgba(0,0,0,0.3);
     }
 
     nav a{
       color:white;
       text-decoration:none;
       font-weight:bold;
-      transition:0.3s;
+      padding:10px 20px;
+      border-radius:8px;
+      transition:all 0.3s ease;
+      background:rgba(64, 224, 208, 0);
     }
 
     nav a:hover{
+      background:rgba(64, 224, 208, 0.2);
       color:#40E0D0;
+      transform:translateY(-2px);
+      box-shadow:0 4px 12px rgba(64, 224, 208, 0.3);
     }
 
     .banner{
       width:100%;
-      height:400px;
-      background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('Maria Firmina dos Reis, por Edições Câmara. 2021.jpg') center/cover;
+      height:450px;
+      background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('Maria Firmina dos Reis, por Edições Câmara. 2021.jpg') center/cover;
       display:flex;
       align-items:center;
       justify-content:center;
       text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .banner::before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      background:linear-gradient(45deg, transparent 30%, rgba(0, 212, 255, 0.1) 50%, transparent 70%);
+      animation:shine 3s infinite;
+    }
+
+    @keyframes shine{
+      0%{transform:translateX(-100%);}
+      100%{transform:translateX(100%);}
     }
 
     .banner h2{
-      background-color:rgba(0,0,0,0.6);
-      padding:20px;
-      border-radius:10px;
+      background-color:rgba(0,0,0,0.7);
+      padding:30px;
+      border-radius:15px;
       color:#40E0D0;
-      font-size:38px;
+      font-size:42px;
+      text-shadow:2px 2px 8px rgba(0,0,0,0.5);
+      position:relative;
+      z-index:2;
+      border:2px solid #40E0D0;
     }
 
     .container{
@@ -114,23 +188,34 @@
     }
 
     .card{
-      background-color:#12294B;
-      margin-bottom:35px;
+      background: linear-gradient(135deg, #1a4d5e 0%, #0f3d52 100%);
+      margin-bottom:40px;
       padding:30px;
       border-radius:15px;
-      box-shadow:0 4px 10px rgba(0,0,0,0.4);
+      box-shadow:0 8px 32px rgba(0, 212, 255, 0.15);
+      border-left:6px solid #40E0D0;
+      transition:all 0.3s ease;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 12px 40px rgba(0, 212, 255, 0.25);
+      border-left-color:#FF6B9D;
     }
 
     .card h2{
       color:#40E0D0;
       margin-bottom:20px;
-      font-size:32px;
+      font-size:36px;
+      text-shadow:2px 2px 4px rgba(0,0,0,0.3);
     }
 
     .card p{
       font-size:18px;
       margin-bottom:15px;
       text-align:justify;
+      color:#E0F7FA;
+      line-height:1.8;
     }
 
     .card img{
@@ -139,39 +224,162 @@
       margin-top:20px;
       max-height:500px;
       object-fit:cover;
+      box-shadow:0 8px 20px rgba(64, 224, 208, 0.2);
+      transition:transform 0.3s ease;
+    }
+
+    .card img:hover{
+      transform:scale(1.03);
     }
 
     .btn{
       display:inline-block;
       margin-top:20px;
-      padding:12px 25px;
-      background-color:#3DDC97;
+      padding:14px 28px;
+      background: linear-gradient(135deg, #3DDC97 0%, #2ec784 100%);
       color:#0B1F3A;
       text-decoration:none;
       border-radius:8px;
       font-weight:bold;
-      transition:0.3s;
+      transition:all 0.3s ease;
+      box-shadow:0 4px 15px rgba(61, 220, 151, 0.3);
+      cursor:pointer;
+      border:none;
     }
 
     .btn:hover{
-      background-color:#2ec784;
-      transform:scale(1.05);
+      transform:scale(1.08) translateY(-3px);
+      box-shadow:0 8px 25px rgba(61, 220, 151, 0.5);
+    }
+
+    .btn:active{
+      transform:scale(0.98);
+    }
+
+    /* Seção de Comentários */
+    .comments-section{
+      background: linear-gradient(135deg, #1a4d5e 0%, #0f3d52 100%);
+      margin-bottom:40px;
+      padding:30px;
+      border-radius:15px;
+      box-shadow:0 8px 32px rgba(0, 212, 255, 0.15);
+      border-left:6px solid #FF6B9D;
+    }
+
+    .comments-section h2{
+      color:#FF6B9D;
+      margin-bottom:25px;
+      font-size:32px;
+      text-align:center;
+      text-shadow:2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .comment-form{
+      background:rgba(0,0,0,0.2);
+      padding:20px;
+      border-radius:10px;
+      margin-bottom:30px;
+    }
+
+    .comment-form input,
+    .comment-form textarea{
+      width:100%;
+      padding:12px;
+      margin-bottom:15px;
+      border:2px solid #40E0D0;
+      border-radius:8px;
+      background:rgba(255,255,255,0.1);
+      color:white;
+      font-family:inherit;
+      font-size:16px;
+      transition:all 0.3s ease;
+    }
+
+    .comment-form input::placeholder,
+    .comment-form textarea::placeholder{
+      color:rgba(255,255,255,0.6);
+    }
+
+    .comment-form input:focus,
+    .comment-form textarea:focus{
+      outline:none;
+      border-color:#FF6B9D;
+      background:rgba(255,255,255,0.15);
+      box-shadow:0 0 15px rgba(255, 107, 157, 0.3);
+    }
+
+    .comment-form textarea{
+      resize:vertical;
+      min-height:100px;
+    }
+
+    .comments-list{
+      max-height:600px;
+      overflow-y:auto;
+    }
+
+    .comment{
+      background:rgba(0,0,0,0.2);
+      padding:15px;
+      margin-bottom:15px;
+      border-radius:10px;
+      border-left:4px solid #40E0D0;
+      transition:all 0.3s ease;
+    }
+
+    .comment:hover{
+      background:rgba(0,0,0,0.3);
+      border-left-color:#FF6B9D;
+    }
+
+    .comment-author{
+      color:#40E0D0;
+      font-weight:bold;
+      margin-bottom:5px;
+    }
+
+    .comment-date{
+      color:rgba(224, 247, 250, 0.6);
+      font-size:14px;
+      margin-bottom:10px;
+    }
+
+    .comment-text{
+      color:#E0F7FA;
+      line-height:1.6;
     }
 
     footer{
-      background-color:#081628;
+      background: linear-gradient(135deg, #081628 0%, #0B1F3A 100%);
       text-align:center;
-      padding:25px;
-      margin-top:40px;
+      padding:30px;
+      margin-top:50px;
+      border-top:4px solid #40E0D0;
+      box-shadow:0 -4px 15px rgba(0,0,0,0.3);
     }
 
     footer p{
-      color:white;
+      color:#E0F7FA;
+      margin:8px 0;
     }
 
-    .importancia{
-      border-left:6px solid #3DDC97;
-      padding-left:20px;
+    .social-links{
+      margin-top:15px;
+      display:flex;
+      justify-content:center;
+      gap:15px;
+    }
+
+    .social-links a{
+      color:#40E0D0;
+      text-decoration:none;
+      font-weight:bold;
+      transition:all 0.3s ease;
+    }
+
+    .social-links a:hover{
+      color:#FF6B9D;
+      transform:scale(1.2);
     }
 
     ul{
@@ -179,14 +387,41 @@
       margin-top:15px;
     }
 
-    @media(max-width:768px){
+    ul li{
+      margin-bottom:10px;
+      color:#E0F7FA;
+    }
 
+    .importancia{
+      border-left-color:#FF6B9D !important;
+    }
+
+    /* Scrollbar customizado */
+    ::-webkit-scrollbar{
+      width:10px;
+    }
+
+    ::-webkit-scrollbar-track{
+      background:#081628;
+    }
+
+    ::-webkit-scrollbar-thumb{
+      background:#40E0D0;
+      border-radius:5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover{
+      background:#FF6B9D;
+    }
+
+    @media(max-width:768px){
       header h1{
-        font-size:30px;
+        font-size:32px;
       }
 
       .banner h2{
-        font-size:26px;
+        font-size:28px;
+        padding:20px;
       }
 
       .card h2{
@@ -203,7 +438,16 @@
       }
 
       .autor-info h3{
-        font-size:20px;
+        font-size:22px;
+      }
+
+      nav{
+        gap:10px;
+      }
+
+      nav a{
+        padding:8px 15px;
+        font-size:14px;
       }
     }
 
@@ -213,7 +457,7 @@
 <body>
 
   <header>
-    <h1>A Vida de Maria Firmina dos Reis</h1>
+    <h1>✨ A Vida de Maria Firmina dos Reis ✨</h1>
     <p>Uma mulher que marcou a história na luta contra o racismo</p>
   </header>
 
@@ -223,25 +467,26 @@
     <p><strong>Idade:</strong> 13 anos</p>
     <p><strong>Data de Nascimento:</strong> 23 de fevereiro de 2013</p>
     <p><strong>Série:</strong> 8º ano</p>
-    <p><strong>✨ Orgulho em ser autista - Neurodiverso! 🌈</strong></p>
+    <div class="badge">🌈 Orgulho em ser autista - Neurodiverso! ✨</div>
   </div>
 
   <nav>
-    <a href="#inicio">Início</a>
-    <a href="#historia">História</a>
-    <a href="#obras">Obras</a>
-    <a href="#racismo">Luta Antirracista</a>
-    <a href="#importancia">Importância</a>
+    <a href="#inicio">🏠 Início</a>
+    <a href="#historia">📖 História</a>
+    <a href="#obras">📚 Obras</a>
+    <a href="#racismo">✊ Luta Antirracista</a>
+    <a href="#importancia">⭐ Importância</a>
+    <a href="#comentarios">💬 Comentários</a>
   </nav>
 
   <section class="banner" id="inicio">
-    <h2>Educação, Literatura e Resistência</h2>
+    <h2>📚 Educação, Literatura e Resistência 📚</h2>
   </section>
 
   <div class="container">
 
     <div class="card" id="historia">
-      <h2>Quem foi Maria Firmina dos Reis?</h2>
+      <h2>🎯 Quem foi Maria Firmina dos Reis?</h2>
 
       <p>
         Maria Firmina dos Reis nasceu em 1822, no Maranhão, e foi uma das mulheres
@@ -254,15 +499,20 @@
         seus livros e sua voz para denunciar as injustiças sofridas pelas pessoas negras.
       </p>
 
+      <p>
+        Sua vida é um exemplo de coragem, dedicação e compromisso com a justiça social.
+      </p>
+
       <img src="Maria f.jpg" alt="Maria Firmina dos Reis">
     </div>
 
     <div class="card" id="obras">
-      <h2>Principais Obras</h2>
+      <h2>📚 Principais Obras</h2>
 
       <p>
         Sua obra mais famosa foi <strong>Úrsula</strong>, publicada em 1859.
-        O livro é considerado um dos primeiros romances abolicionistas do Brasil.
+        O livro é considerado um dos primeiros romances abolicionistas do Brasil e uma
+        obra revolucionária para a época.
       </p>
 
       <p>
@@ -270,36 +520,42 @@
       </p>
 
       <ul>
-        <li>Úrsula</li>
-        <li>A Escrava</li>
-        <li>Cantos à beira-mar</li>
-        <li>Gupeva</li>
+        <li><strong>Úrsula</strong> - Romance que denuncia a escravidão</li>
+        <li><strong>A Escrava</strong> - Poesia poderosa sobre a liberdade</li>
+        <li><strong>Cantos à beira-mar</strong> - Composições musicais</li>
+        <li><strong>Gupeva</strong> - Obra de ficção científica</li>
       </ul>
 
       <img src="cantos a b mar.jpg" alt="Cantos à beira-mar">
 
-      <a href="#" class="btn">Conhecer Mais</a>
+      <button class="btn">📖 Conhecer Mais</button>
     </div>
 
     <div class="card" id="racismo">
-      <h2>A Luta Contra o Racismo</h2>
+      <h2>✊ A Luta Contra o Racismo</h2>
 
       <p>
         Maria Firmina dos Reis lutou contra o racismo através da educação e da literatura.
         Ela defendia a liberdade das pessoas escravizadas e acreditava que todos mereciam
-        respeito e igualdade.
+        respeito, dignidade e igualdade.
       </p>
 
       <p>
         Suas histórias mostravam os sentimentos e sofrimentos das pessoas negras,
-        algo muito importante em uma época em que o preconceito era muito forte.
+        algo muito importante em uma época em que o preconceito era extremamente forte.
+        Ela foi uma voz que ecoou contra as injustiças do sistema escravocrata.
+      </p>
+
+      <p>
+        Como educadora, ela também usou a sala de aula como espaço de transformação,
+        ensinando seus alunos a pensar criticamente sobre a sociedade.
       </p>
 
       <img src="Maria.jpg" alt="Maria Firmina - Símbolo de Liberdade">
     </div>
 
     <div class="card importancia" id="importancia">
-      <h2>A Importância de Maria Firmina na História</h2>
+      <h2>⭐ A Importância de Maria Firmina na História</h2>
 
       <p>
         Maria Firmina dos Reis abriu caminho para futuras escritoras negras no Brasil.
@@ -309,24 +565,129 @@
 
       <p>
         Hoje ela é reconhecida como símbolo da literatura afro-brasileira e uma das
-        mulheres mais importantes da história do país.
+        mulheres mais importantes da história do país. Seu legado continua vivo e inspirando
+        gerações de leitores, escritores e ativistas.
+      </p>
+
+      <p>
+        Em um Brasil que ainda enfrenta desafios raciais, a história de Maria Firmina nos
+        lembra que a resistência, a educação e a literatura são armas poderosas contra
+        a opressão.
       </p>
 
       <img src="Maria Firmina 1.png" alt="Maria Firmina dos Reis">
 
-      <a href="#" class="btn">Compartilhar História</a>
+      <button class="btn">❤️ Compartilhar História</button>
+    </div>
+
+    <!-- Seção de Comentários -->
+    <div class="comments-section" id="comentarios">
+      <h2>💬 Deixe seu Comentário</h2>
+
+      <div class="comment-form">
+        <input type="text" id="commentName" placeholder="Seu nome" maxlength="50">
+        <textarea id="commentText" placeholder="Sua opinião ou comentário sobre Maria Firmina dos Reis..."></textarea>
+        <button class="btn" onclick="addComment()">📤 Enviar Comentário</button>
+      </div>
+
+      <div class="comments-list" id="commentsList">
+        <!-- Comentários serão adicionados aqui -->
+      </div>
     </div>
 
   </div>
 
   <footer>
     <p>
-      Blog criado por Wilton do Nascimento Medina Júnior - 8º ano © 2026
+      🎓 Blog criado por Wilton do Nascimento Medina Júnior - 8º ano © 2026
     </p>
     <p>
       ✨ Celebrando a história de Maria Firmina dos Reis ✨
     </p>
+    <div class="social-links">
+      <a href="#">🌐 GitHub</a>
+      <a href="#">📧 Email</a>
+      <a href="#">📱 Redes Sociais</a>
+    </div>
   </footer>
+
+  <script>
+    // Carregar comentários do localStorage
+    function loadComments(){
+      const comments = JSON.parse(localStorage.getItem('comments')) || [];
+      const commentsList = document.getElementById('commentsList');
+      
+      commentsList.innerHTML = '';
+      
+      if(comments.length === 0){
+        commentsList.innerHTML = '<p style="text-align:center; color:rgba(224,247,250,0.6);">Ainda não há comentários. Seja o primeiro a comentar! 😊</p>';
+        return;
+      }
+
+      comments.reverse().forEach(comment => {
+        const commentDiv = document.createElement('div');
+        commentDiv.className = 'comment';
+        commentDiv.innerHTML = `
+          <div class="comment-author">👤 ${comment.name}</div>
+          <div class="comment-date">📅 ${comment.date}</div>
+          <div class="comment-text">${comment.text}</div>
+        `;
+        commentsList.appendChild(commentDiv);
+      });
+    }
+
+    // Adicionar novo comentário
+    function addComment(){
+      const name = document.getElementById('commentName').value.trim();
+      const text = document.getElementById('commentText').value.trim();
+
+      if(!name){
+        alert('Por favor, insira seu nome! 😊');
+        return;
+      }
+
+      if(!text){
+        alert('Por favor, escreva seu comentário! 💬');
+        return;
+      }
+
+      if(name.length > 50 || text.length > 500){
+        alert('Seu nome ou comentário é muito longo! ❌');
+        return;
+      }
+
+      const comments = JSON.parse(localStorage.getItem('comments')) || [];
+      
+      const newComment = {
+        name: name,
+        text: text,
+        date: new Date().toLocaleString('pt-BR')
+      };
+
+      comments.push(newComment);
+      localStorage.setItem('comments', JSON.stringify(comments));
+
+      document.getElementById('commentName').value = '';
+      document.getElementById('commentText').value = '';
+
+      loadComments();
+      alert('Comentário enviado com sucesso! ✨');
+    }
+
+    // Carregar comentários quando a página carrega
+    window.addEventListener('load', loadComments);
+
+    // Efeito de scroll suave
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e){
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target){
+          target.scrollIntoView({behavior: 'smooth'});
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
